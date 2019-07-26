@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="client.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Salary Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>Salary Calculator</h1>
+    </header>
+    <main>
+        <section id="employeeForm">
+            <h4>Add Employee</h4>
+            <input type="text" placeholder="First Name" id="inFirst">
+            <input type="text" placeholder="Last Name" id="inLast">
+            <input type="number" placeholder="Employee ID" id="inEmpId">
+            <input type="text" placeholder="Job Title" id=inTitle>
+            <input type="number" placeholder="Annual Salary" id="inSalary">
+            <button id="addButton">Submit</button>
+        </section>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Employee ID</th>
+                    <th>Job Title</th>
+                    <th>Annual Salary</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="employeeOut">
+                <!--Employee Inputs go here-->
+                <tr>
+                    <td>Allyson</td>
+                    <td>Holdahl</td>
+                    <td>1637848</td>
+                    <td>Financial Ops Specialist</td>
+                    <td>39998.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        Total Monthly: $<span id="monthlyOut">0.00</span>
+    </footer>
+</body>
+</html>
