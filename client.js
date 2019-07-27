@@ -1,15 +1,16 @@
 $(document).ready(readyNow);
 
-let monthlyOut = 0;
+let salaryTotal = 0;
 
-function readyNow (){
-    $('#monthlyOut').text(monthlyOut);
+function readyNow() {
+    $('#monthlyOut').text(salaryTotal / 12);
     $('#addButton').on('click', addEmployee);
-    //$('#employeeOut').on('click', #('.deleteEmp'), deleteEmployee);
+    $('#employeeOut').on('click', '.deleteEmp', deleteEmployee)
 }
 
-function addEmployee(){
-    $('#employeeOut').append(`<tr>
+function addEmployee() {
+    //add employee data to table on DOM
+    $('#employeeOut').append(`<tr class="newEmployee">
                     <td>${$('#inFirst').val()} </td>
                     <td>${$('#inLast').val()} </td>
                     <td>${$('#inEmpId').val()} </td>
@@ -17,10 +18,22 @@ function addEmployee(){
                     <td>${$('#inSalary').val()} </td>
                     <td><button class="deleteEmp">Delete</button></td>
                     </tr>`)
-    monthlyOut += Number($('#inSalary').val());
-    $('#monthlyOut').text(monthlyOut/12);
+    //calculate monthly salary total
+    salaryTotal += Number($('#inSalary').val());
+    $('#monthlyOut').text(salaryTotal / 12);
+    //is monthlyOut > $20,000?
+    if (salaryTotal / 12 > 20000) {
+        $('#monthlyOut').css("background-color", "red");
+    }
+    //clear input fields
+    $('#inFirst').val('');
+    $('#inLast').val('');
+    $('#inEmpId').val('');
+    $('#inTitle').val('');
+    $('#inSalary').val('');
 }
 
-function deleteEmployee(){
-    console.log('in delete button');
+function deleteEmployee() {
+    //remove this tr from the DOM
+    $(this).parent().parent().remove();
 }
