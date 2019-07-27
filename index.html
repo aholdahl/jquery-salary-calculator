@@ -14,19 +14,19 @@
 
 <body>
     <header>
-        <h1>Salary Calculator</h1>
+        <h1 class="jumbotron jumbotron-fluid">Salary Calculator</h1>
     </header>
     <main>
         <section id="employeeForm">
             <h4>Add Employee</h4>
-            <input type="text" placeholder="First Name" id="inFirst">
-            <input type="text" placeholder="Last Name" id="inLast">
-            <input type="number" placeholder="Employee ID" id="inEmpId">
-            <input type="text" placeholder="Job Title" id=inTitle>
-            <input type="number" placeholder="Annual Salary" id="inSalary">
+            <input type="text" placeholder="First Name" class="col-auto" id="inFirst">
+            <input type="text" placeholder="Last Name" class="col-auto" id="inLast">
+            <input type="number" placeholder="Employee ID" class="col-auto" id="inEmpId">
+            <input type="text" placeholder="Job Title" class="col-auto" id=inTitle>
+            <input type="number" placeholder="Annual Salary" class="col-auto" id="inSalary">
             <button id="addButton">Submit</button>
         </section>
-        <table>
+        <table class="table table-dark table-striped table-bordered table-hover">
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -39,14 +39,14 @@
             </thead>
             <tbody id="employeeOut">
                 <!--Employee Inputs go here-->
-                <!-- <tr>
+                <tr>
                     <td>Allyson</td>
                     <td>Holdahl</td>
                     <td>1637848</td>
                     <td>Financial Ops Specialist</td>
                     <td>39998.00</td>
-                    <td><button class="deleteEmp">Delete</button></td>
-                </tr> -->
+                    <td><button class="deleteEmp btn btn-info">Delete</button></td>
+                </tr>
             </tbody>
         </table>
     </main>
