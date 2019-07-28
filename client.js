@@ -4,8 +4,8 @@ let salaryTotal = 0;
 
 function readyNow() {
     $('#monthlyOut').text(salaryTotal / 12);
-    $('#addButton').on('click', addEmployee);//At the click event within Submit button, initiate addEmployee Function
-    $('#employeeOut').on('click', '.deleteEmp', deleteEmployee)//At the click event within Delete button, initiate deleteEmployeeFunction
+    $('#addButton').on('click', addEmployee); //At the click event within Submit button, initiate addEmployee Function
+    $('#employeeOut').on('click', '.deleteEmp', deleteEmployee) //At the click event within Delete button, initiate deleteEmployeeFunction
     $('input').keyup(enterToClick); //At the keyup event within Input element, initiate hideError function
 
 }
@@ -21,11 +21,11 @@ function addEmployee() {
                     <td class="deleteBtnContainer"><button class="deleteEmp btn btn-info">Delete</button></td>
                     </tr>`)
     //calculate monthly salary total
-    salaryTotal += Number($('#inSalary').val());//converts to number before adding
-    $('#monthlyOut').text((salaryTotal / 12).toFixed(2));//always shows two decimals
+    salaryTotal += Number($('#inSalary').val()); //converts to number before adding
+    $('#monthlyOut').text((salaryTotal / 12).toFixed(2)); //always shows two decimals
     //is monthlyOut > $20,000?
     if (salaryTotal / 12 > 20000) {
-        $('#monthlyOut').parent().addClass("alert alert-danger");//updates background color of parent element
+        $('#monthlyOut').parent().addClass("alert alert-danger"); //updates background color of parent element
     }
     //clear input fields
     $('#inFirst').val('');
@@ -44,12 +44,12 @@ function deleteEmployee() {
     $(this).parent().parent().remove();
     //is monthlyOut < $20,000?
     if (salaryTotal / 12 < 20000) {
-    $('#monthlyOut').parent().removeClass("alert alert-danger"); //updates background color of parent element
+        $('#monthlyOut').parent().removeClass("alert alert-danger"); //updates background color of parent element
     }
 }
 
 function enterToClick(key) {
     if (key.keyCode == 13) { //checks if enter/return key was released
-        addEmployee(); //if true, run newCar function
+        addEmployee(); //if true, run addEmployee function
     } //end if
 } //end enterToClick function
