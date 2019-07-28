@@ -1,0 +1,24 @@
+.myHeader {
+    text-indent: 20px;
+}
+
+.myContent {
+    margin: 10px;
+}
+
+.myInputs {
+    margin-bottom: 10px;
+}
+
+#addButton {
+    margin-bottom: 10px;
+}
+
+.deleteBtnContainer {
+    text-align: center;
+}
+
+.myFooter {
+    text-align: right;
+    margin: 20px;
+}

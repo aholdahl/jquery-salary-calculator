@@ -15,15 +15,15 @@ function addEmployee() {
                     <td>${$('#inLast').val()} </td>
                     <td>${$('#inEmpId').val()} </td>
                     <td>${$('#inTitle').val()} </td>
-                    <td>${$('#inSalary').val()} </td>
-                    <td><button class="deleteEmp btn btn-info">Delete</button></td>
+                    <td>${$('#inSalary').val()}</td>
+                    <td class="deleteBtnContainer"><button class="deleteEmp btn btn-info">Delete</button></td>
                     </tr>`)
     //calculate monthly salary total
     salaryTotal += Number($('#inSalary').val());
-    $('#monthlyOut').text(salaryTotal / 12);
+    $('#monthlyOut').text((salaryTotal / 12).toFixed(2));
     //is monthlyOut > $20,000?
     if (salaryTotal / 12 > 20000) {
-        $('#monthlyOut').css("background-color", "red");//change to addClass and use bootstrap warning styles
+        $('#monthlyOut').parent().addClass("alert alert-danger");
     }
     //clear input fields
     $('#inFirst').val('');

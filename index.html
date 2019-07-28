@@ -14,17 +14,17 @@
 
 <body>
     <header>
-        <h1 class="jumbotron jumbotron-fluid">Salary Calculator</h1>
+        <h1 class="myHeader jumbotron jumbotron-fluid">Salary Calculator</h1>
     </header>
-    <main>
+    <main class="myContent">
         <section id="employeeForm">
             <h4>Add Employee</h4>
-            <input type="text" placeholder="First Name" class="col-auto" id="inFirst">
-            <input type="text" placeholder="Last Name" class="col-auto" id="inLast">
-            <input type="number" placeholder="Employee ID" class="col-auto" id="inEmpId">
-            <input type="text" placeholder="Job Title" class="col-auto" id=inTitle>
-            <input type="number" placeholder="Annual Salary" class="col-auto" id="inSalary">
-            <button id="addButton">Submit</button>
+            <input type="text" placeholder="First Name" class="myInputs col-auto" id="inFirst">
+            <input type="text" placeholder="Last Name" class="myInputs col-auto" id="inLast">
+            <input type="number" placeholder="Employee ID" class="myInputs col-auto" id="inEmpId">
+            <input type="text" placeholder="Job Title" class="myInputs col-auto" id=inTitle>
+            <input type="number" placeholder="Annual Salary" class="myInputs col-auto" id="inSalary">
+            <button class="btn btn-secondary" id="addButton">Submit</button>
         </section>
         <table class="table table-dark table-striped table-bordered table-hover">
             <thead>
@@ -40,18 +40,18 @@
             <tbody id="employeeOut">
                 <!--Employee Inputs go here-->
                 <tr>
-                    <td>Allyson</td>
-                    <td>Holdahl</td>
-                    <td>1637848</td>
-                    <td>Financial Ops Specialist</td>
-                    <td>39998.00</td>
-                    <td><button class="deleteEmp btn btn-info">Delete</button></td>
+                    <td>Sample</td>
+                    <td>Student</td>
+                    <td>123</td>
+                    <td>Gopher</td>
+                    <td>0.00</td>
+                    <td class="deleteBtnContainer"><button class="deleteEmp btn btn-info">Delete</button></td>
                 </tr>
             </tbody>
         </table>
     </main>
     <footer>
-        <p>Total Monthly: $<span id="monthlyOut"></span></p>
+        <p class="myFooter">Total Monthly: $<span id="monthlyOut"></span></p>
     </footer>
 </body>
 
