@@ -14,6 +14,10 @@
     margin-bottom: 10px;
 }
 
+.titleCasing {
+    text-transform: capitalize;
+}
+
 .deleteBtnContainer {
     text-align: center;
 }
