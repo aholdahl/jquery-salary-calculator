@@ -22,7 +22,7 @@ function addEmployee() {
                     <td class="titleCasing">${$('#inLast').val()} </td>
                     <td>${$('#inEmpId').val()} </td>
                     <td class="titleCasing">${$('#inTitle').val()} </td>
-                    <td class = "annualSalaryOut"> ${$('#inSalary').val()}</td>
+                    <td class = "annualSalaryOut">$ ${$('#inSalary').val()}</td>
                     <td class="deleteBtnContainer"><button class="deleteEmp btn btn-info">Delete</button></td>
                     </tr>`)
     //calculate monthly salary total
@@ -36,6 +36,7 @@ function addEmployee() {
     $('#inEmpId').val('');
     $('#inTitle').val('');
     $('#inSalary').val('');
+    $('#inFirst').focus();
 }
 
 function isSalaryOver (){
