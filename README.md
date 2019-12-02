@@ -1,4 +1,8 @@
 # Weekend Challenge: jQuery Salary Calculator
+
+Open index.html to view
+HTML, CSS/Bootstrap, JQuery
+
 This application's purpose is to record employee salaries and adds salaries up to report monthly costs. 
 
 ## Getting Started
